@@ -17,10 +17,10 @@ https://github.com/adafruit/Adafruit_SSD1306
 
 Hardware used is:
 
-Teensy 3.6
-SPI bus MCP2515 CAN Adapter
-TCA9548A IIC/I2C 8 channel Multiplexer
-4x .96" IIC/I2C OLED displays
+* Teensy 3.6
+* SPI bus MCP2515 CAN Adapter
+* TCA9548A IIC/I2C 8 channel Multiplexer
+* 4x .96" IIC/I2C OLED displays
 
 As built it is tuned for a Teensy 3.5/3.6 (hence the i2c_t3 library), however it can use wire.h and run on an Arduino but you will need to adjust the I2C data rate beyond the default 100khz to 400khz or higher.    I am currently running at >1Mhz, which works fine with my wiring and my Teensy, but your mileage may vary, the SSD1306 displays are only rated at 400khz, officially.
 
