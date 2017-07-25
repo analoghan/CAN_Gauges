@@ -1,21 +1,14 @@
 # CAN_Gauges
 Arduino/Teensy CAN Gauges with OLED displays
 
-This sketch is designed to use the following libraries:
+**This sketch is designed to use the following libraries:**
 
-Cory Fowler's MCP_CAN:
-https://github.com/coryjfowler/MCP_CAN_lib
+* Cory Fowler's MCP_CAN:https://github.com/coryjfowler/MCP_CAN_lib
+* Nox771's i2c_t3: https://github.com/nox771/i2c_t3
+* Adafruit GFX: https://github.com/adafruit/Adafruit-GFX-Library
+* Adafruit SSD1306: https://github.com/adafruit/Adafruit_SSD1306
 
-Nox771's i2c_t3:
-https://github.com/nox771/i2c_t3
-
-Adafruit GFX:
-https://github.com/adafruit/Adafruit-GFX-Library
-
-Adafruit SSD1306:
-https://github.com/adafruit/Adafruit_SSD1306
-
-Hardware used is:
+**Hardware used is:**
 
 * Teensy 3.6
 * SPI bus MCP2515 CAN Adapter
