@@ -10,12 +10,12 @@ Arduino/Teensy CAN Gauges with OLED displays
 
 **Hardware used is:**
 
-* Teensy 3.6
+* Teensy 3.2
 * SPI bus MCP2515 CAN Adapter
 * TCA9548A IIC/I2C 8 channel Multiplexer
 * 4x .96" IIC/I2C OLED displays
 
-As built it is tuned for a Teensy 3.5/3.6 (hence the i2c_t3 library), however it can use wire.h and run on an Arduino but you will need to adjust the I2C data rate beyond the default 100khz to 400khz or higher.    I am currently running at >1Mhz, which works fine with my wiring and my Teensy, but your mileage may vary, the SSD1306 displays are only rated at 400khz, officially.
+As built it is tuned for a Teensy 3.2 (but will run on a 3.5/3.6 for sure, though not a Teensy LC).   As such it uses the  i2c_t3 library; however it can use wire.h and run on an Arduino but you will need to adjust the I2C data rate beyond the default 100khz to 400khz or higher.    I am currently running at >1Mhz, which works fine with my wiring and my Teensy, but your mileage may vary, the SSD1306 displays are only rated at 400khz, officially.   I cannot guarantee interrupt behavior on Arduino or other boards, it works properly on Teensy 3.2, 3.5 adn 3.6 from my testing.
 
 CAN decoding/math is currently setup for an AEM Infinity system, using 29 bit addresses and running filters for CAN ID: 0 through D.    This can be adjusted pretty easily, you will simply need the documentation from your manufacturer (or you can reverse engineer it).   This currently only listens/ACKs messages and does not send.
 
