@@ -22,3 +22,24 @@ CAN decoding/math is currently setup for an AEM Infinity system, using 29 bit ad
 There are several gauges that function simply as performnace/functionality tests in this build.   These will eventually be removed but are currently there to profile performance of the program. 
 
 The button is intended to switch between multiple sets of (up to 4) gauges and is eletrically configured like most example "momentary buttons" on various Arduino/Teensy tutorials.
+
+----
+
+I have attached a PCB design created in KiCad with the following component list:
+
+U1: TSR 1-2433 - 3.3V Regulator
+U2: TSR 1-2450 - 5V Regulator
+U3: TCA9548A - I2C Multiplexer
+IC3: MCP_2515 (Niren) - SPI CAN Transceiver
+IC5: Teensy 3.2
+C1: 581-01-24-011 - ModICE Cinch Connector, 24 POS
+R1: CRCW1210220RFKEA - 220 Ohm - 1210 Footprint
+R2: CRCW1210220RFKEA - 220 Ohm - 1210 Footprint
+R5: ERA-14EB102U - 1K Ohm - 1210 Footprint
+R6: KTR25JZPJ104 - 100K Ohm - 1210 Footprint
+C1: 885012209035 - 0.01uF - 1210 Footprint
+D1: SBR10U45SD1-T - Schottky Diode, 45V, 10A
+D2: SLD24U-017-B - TVS Diode, 24V, 2200W
+Enclosure: 	581-01-30-065 - Cinch ModICE ME Enclosure
+
+I have one of these PCBs running my gauges successfully off of my AEM Infinity ECU now.
